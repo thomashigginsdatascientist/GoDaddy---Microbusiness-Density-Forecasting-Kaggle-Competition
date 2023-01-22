@@ -74,3 +74,11 @@ for(i in 1:length(cfips)){
   print(paste0("on to the next one! So far we have completed ", i, " models!"))
   
 }
+
+
+colnames(sample_submission)
+
+submission <- storage[,c("row_id", "pred")]
+colnames(submission)[2] <- "microbusiness_density"
+
+write_csv(submission, "C:/Users/thigg/Documents/GoDaddy Kaggle Comp/submission.csv")
